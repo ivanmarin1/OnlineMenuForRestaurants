@@ -1,10 +1,12 @@
 .list {
   width: 80%;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .listItem {
   margin: 5px auto;
+  display: inline-block;
+  width: 20%;
   background-color: #ffc8b0;
   border: 1px solid rgb(138, 120, 120);
   padding: 10px;

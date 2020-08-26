@@ -60,13 +60,7 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 3fr",
-          gridColumnGap: "2em",
-        }}
-      >
+      <div style={{}}>
         <div className={style.list}>
           {menuSections.map((section, index) => {
             return (
@@ -81,7 +75,9 @@ export default class Navbar extends React.Component {
                 }}
               >
                 <h3>{section.sectionName}</h3>
-                <Image filename={section.sectionImage}></Image>
+                <div style={{ width: "100px" }}>
+                  <Image filename={section.sectionImage}></Image>
+                </div>
               </div>
             )
           })}
