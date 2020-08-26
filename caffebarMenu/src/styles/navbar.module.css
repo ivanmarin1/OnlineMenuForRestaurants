@@ -1,0 +1,21 @@
+.list {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.listItem {
+  margin: 5px auto;
+  background-color: #ffc8b0;
+  border: 1px solid rgb(138, 120, 120);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.zoom {
+  transition: transform 0.2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}

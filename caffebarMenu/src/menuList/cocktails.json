@@ -1,0 +1,74 @@
+{
+  "sectionName": "Cocktails",
+  "sectionImage": "mojito.png",
+  "drinks": [
+    {
+      "name": "Sex on the beach",
+      "image": "sexonthebeach.png",
+      "ingredients": [
+        "Vodka",
+        "Peach liqueuer",
+        "Orange juice",
+        "Pineapple juice"
+      ],
+      "price": "50 HRK"
+    },
+    {
+      "name": "Piña colada ",
+      "image": "pinacolada.png",
+      "ingredients": [
+        "White rum",
+        "Coconut cream",
+        "Fresh lime juice",
+        "Pineapple juice"
+      ],
+      "price": "55 HRK"
+    },
+    {
+      "name": "Mojito",
+      "image": "mojito.png",
+      "ingredients": [
+        "White rum",
+        "Fresh lime",
+        "Mint leaves",
+        "Brown sugar",
+        "Soda water"
+      ],
+      "price": "45 HRK"
+    },
+    {
+      "name": "Sex on the beach",
+      "image": "sexonthebeach.png",
+      "ingredients": [
+        "Vodka",
+        "Peach liqueuer",
+        "Orange juice",
+        "Pineapple juice"
+      ],
+      "price": "50 HRK"
+    },
+    {
+      "name": "Piña colada ",
+      "image": "pinacolada.png",
+      "ingredients": [
+        "White rum",
+        "Coconut cream",
+        "Fresh lime juice",
+        "Pineapple juice"
+      ],
+      "price": "55 HRK"
+    },
+    {
+      "name": "Mojito",
+      "image": "mojito.png",
+      "ingredients": [
+        "White rum",
+        "Fresh lime",
+        "Mint leaves",
+        "Brown sugar",
+        "Soda water"
+      ],
+      "price": "45 HRK"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "sectionName": "Virgin cocktails",
+  "sectionImage": "pinacolada.png",
+  "drinks": [
+    {
+      "name": "Virgin Sex on the beach",
+      "image": "sexonthebeach.png",
+      "ingredients": ["Peach juice", "Orange juice", "Pineapple juice"],
+      "price": "50 HRK"
+    },
+    {
+      "name": "Virgin Piña colada ",
+      "image": "pinacolada.png",
+      "ingredients": ["Coconut cream", "Fresh lime juice", "Pineapple juice"],
+      "price": "55 HRK"
+    },
+    {
+      "name": "Virgin Mojito",
+      "image": "mojito.png",
+      "ingredients": ["Fresh lime", "Mint leaves", "Brown sugar", "Soda water"],
+      "price": "45 HRK"
+    },
+    {
+      "name": "Virgin Sex on the beach",
+      "image": "sexonthebeach.png",
+      "ingredients": ["Peach juice", "Orange juice", "Pineapple juice"],
+      "price": "50 HRK"
+    },
+    {
+      "name": "Virgin Piña colada ",
+      "image": "pinacolada.png",
+      "ingredients": ["Coconut cream", "Fresh lime juice", "Pineapple juice"],
+      "price": "55 HRK"
+    },
+    {
+      "name": "Virgin Mojito",
+      "image": "mojito.png",
+      "ingredients": ["Fresh lime", "Mint leaves", "Brown sugar", "Soda water"],
+      "price": "45 HRK"
+    }
+  ]
+}
