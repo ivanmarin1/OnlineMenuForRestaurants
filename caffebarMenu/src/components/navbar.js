@@ -1,6 +1,8 @@
 import React from "react"
 import Cocktails from "../menuList/cocktails.json"
 import VirginCocktails from "../menuList/virginCocktails.json"
+import Coffee from "../menuList/coffee.json"
+import ShortDrinks from "../menuList/shortDrinks.json"
 import Items from "../components/items"
 import Image from "./image"
 import style from "../styles/navbar.module.css"
@@ -13,7 +15,7 @@ import style from "../styles/navbar.module.css"
 //   "Virgin cocktails",
 // ]
 
-const menuSections = [Cocktails, VirginCocktails]
+const menuSections = [Cocktails, VirginCocktails, Coffee, ShortDrinks]
 
 // const Navbar = () => (
 //   <nav>
@@ -75,8 +77,12 @@ export default class Navbar extends React.Component {
                 }}
               >
                 <h3>{section.sectionName}</h3>
-                <div style={{ width: "100px" }}>
-                  <Image filename={section.sectionImage}></Image>
+                <div className={style.imgWrapper}>
+                  <Image
+                    width="100%"
+                    height="150px"
+                    filename={section.sectionImage}
+                  ></Image>
                 </div>
               </div>
             )

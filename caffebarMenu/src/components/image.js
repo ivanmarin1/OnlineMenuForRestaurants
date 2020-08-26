@@ -31,7 +31,20 @@ const Image = props => (
 
       // const imageSizes = image.node.childImageSharp.sizes
       const imageFluids = image.node.childImageSharp.fluid
-      return <Img alt={props.alt} fluid={imageFluids} />
+      let width = 0
+      let height = 0
+      if (props.width) width = props.width
+      else width = "100%"
+      if (props.height) height = props.height
+      else height = ""
+
+      const style = {
+        objectFit: "cover",
+        width: width,
+        height: height,
+        position: "absolute",
+      }
+      return <Img imgStyle={style} alt={props.alt} fluid={imageFluids} />
     }}
   />
 )

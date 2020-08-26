@@ -6,12 +6,24 @@
 .listItem {
   margin: 5px auto;
   display: inline-block;
-  width: 20%;
+  width: 200px;
   background-color: #ffc8b0;
   border: 1px solid rgb(138, 120, 120);
   padding: 10px;
   border-radius: 5px;
   text-align: center;
+  cursor: pointer;
+}
+.imgWrapper,
+.imgWrapper img,
+.imgWrapper caption {
+  /* object-fit: scale-down; */
+  /* width: 150px !important;
+  height: 100px !important; */
+}
+
+.imgWrapper caption {
+  margin: 0;
 }
 
 .zoom {
@@ -20,4 +32,5 @@
 
 .zoom:hover {
   transform: scale(1.2);
+  z-index: 1;
 }
