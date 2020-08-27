@@ -6,7 +6,7 @@ const Items = ({ menuItems }) => {
   let hidden = ""
   const screenWidth = typeof window !== "undefined" && window.screen.availWidth
   if (screenWidth < 1080) hidden = style.hidden
-  console.log("WidtH: " + window.screen.availWidth)
+  console.log("WidtH: " + screenWidth)
   return (
     <div
       style={{
