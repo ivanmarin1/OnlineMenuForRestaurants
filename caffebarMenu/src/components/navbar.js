@@ -46,7 +46,7 @@ export default class Navbar extends React.Component {
                 role="button"
                 tabIndex={index}
                 className={`${style.listItem} ${style.zoom} ${
-                  this.state.active == index ? style.active : ""
+                  this.state.active === index ? style.active : ""
                 }`}
                 id={index}
                 onClick={e => {
