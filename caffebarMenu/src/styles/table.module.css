@@ -17,6 +17,10 @@
   margin-bottom: 35px;
 }
 
+.hidden {
+  display: none;
+}
+
 #featureStyle li:before {
   content: "✓";
   color: green;
