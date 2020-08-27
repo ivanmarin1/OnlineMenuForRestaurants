@@ -39,7 +39,7 @@ export default class Navbar extends React.Component {
     super(props)
     this.state = {
       ActiveList: menuSections[0],
-      active: "first",
+      active: "0",
     }
     this._onButtonClick = this._onButtonClick.bind(this)
     this.addActiveClass = this.addActiveClass.bind(this)
@@ -51,8 +51,9 @@ export default class Navbar extends React.Component {
     })
   }
 
-  addActiveClass(e) {
-    const clicked = e.target.id
+  addActiveClass(id) {
+    const clicked = id
+    console.log("Clicked: " + clicked)
     if (this.state.active === clicked) {
       this.setState({ active: "" })
     } else {
@@ -62,17 +63,23 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <div style={{}}>
+      <div>
         <div className={style.list}>
           {menuSections.map((section, index) => {
             return (
               <div
+                role="button"
+                tabIndex={index}
                 className={`${style.listItem} ${style.zoom} ${
-                  this.state.active === "first"
+                  this.state.active == index ? style.active : ""
                 }`}
-                id="first"
+                id={index}
                 onClick={e => {
-                  this.addActiveClass(e)
+                  this.addActiveClass(index)
+                  this._onButtonClick(index)
+                }}
+                onKeyDown={e => {
+                  this.addActiveClass(index)
                   this._onButtonClick(index)
                 }}
               >

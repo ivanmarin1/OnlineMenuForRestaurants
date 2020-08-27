@@ -1,9 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Items from "../components/items"
 import Navbar from "../components/navbar"
-import Cocktails from "../menuList/cocktails.json"
 
 const IndexPage = () => (
   <Layout>
