@@ -4,7 +4,8 @@ import style from "../styles/table.module.css"
 
 const Items = ({ menuItems }) => {
   let hidden = ""
-  if (window.screen.availWidth < 1080) hidden = style.hidden
+  const screenWidth = typeof window !== "undefined" && window.screen.availWidth
+  if (screenWidth < 1080) hidden = style.hidden
   console.log("WidtH: " + window.screen.availWidth)
   return (
     <div
