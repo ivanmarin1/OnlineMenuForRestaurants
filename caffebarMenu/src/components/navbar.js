@@ -7,32 +7,7 @@ import Items from "../components/items"
 import Image from "./image"
 import style from "../styles/navbar.module.css"
 
-// const menuSections = [
-//   "Warm beverages",
-//   "Short drinks",
-//   "Long drinks",
-//   "Coffee",
-//   "Virgin cocktails",
-// ]
-
 const menuSections = [Cocktails, VirginCocktails, Coffee, ShortDrinks]
-
-// const Navbar = () => (
-//   <nav>
-//     {/* {menuSections.map((section, index) => {
-//       return (
-//         <PostLink
-//           element={index}
-//           key={index}
-//           drink={section.sectionName}
-//           image={""}
-//         />
-//       )
-//     })} */}
-//     <Apartments menuSections={menuSections}></Apartments>
-//   </nav>
-// )
-// export default Navbar
 
 export default class Navbar extends React.Component {
   constructor(props) {
