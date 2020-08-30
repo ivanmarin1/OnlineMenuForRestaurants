@@ -21,10 +21,10 @@ const Items = ({ menuItems }) => {
           <div
             style={{
               width: "100%",
-              border: "1px solid #ded9d9",
+              border: "",
               borderRadius: "10px",
               padding: "1%",
-              backgroundColor: "",
+              backgroundColor: "#f8f8f8",
               position: "relative",
             }}
           >

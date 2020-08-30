@@ -43,8 +43,8 @@ const Image = props => (
         width: width,
         height: height,
         position: "absolute",
-        border: "1px solid lightgrey",
-        borderRadius: "10px",
+        border: "",
+        borderRadius: "3px",
       }
       return <Img imgStyle={style} alt={props.alt} fluid={imageFluids} />
     }}
