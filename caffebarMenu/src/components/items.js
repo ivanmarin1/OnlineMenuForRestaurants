@@ -3,64 +3,65 @@ import React from "react"
 import style from "../styles/table.module.css"
 
 const Items = ({ menuItems }) => {
-  let hidden = ""
-  const screenWidth = typeof window !== "undefined" && window.screen.availWidth
-  if (screenWidth < 1080) hidden = style.hidden
-  console.log("WidtH: " + screenWidth)
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
-        gridColumnGap: "2em",
-        gridRowGap: "2em",
-      }}
-    >
-      {menuItems.drinks.map(drink => {
-        return (
-          <div
-            style={{
-              width: "100%",
-              border: "",
-              borderRadius: "10px",
-              padding: "1%",
-              backgroundColor: "#f8f8f8",
-              position: "relative",
-            }}
-          >
-            <div style={{ margin: "10px", color: "#333;" }}>
-              <h3 style={{ fontWeight: "normal", height: "2em" }}>
-                {drink.name}
-              </h3>
-            </div>
+    <div>
+      <h2>Drinks</h2>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+          gridColumnGap: "2em",
+          gridRowGap: "2em",
+        }}
+      >
+        {menuItems.drinks.map(drink => {
+          return (
             <div
-              style={{ width: "80%", margin: "0 auto", marginBottom: "20px" }}
+              style={{
+                width: "100%",
+                border: "",
+                borderRadius: "10px",
+                padding: "1%",
+                backgroundColor: "#f8f8f8",
+                display: "flex",
+                flexDirection: "column",
+              }}
             >
-              <Image width="100%" height="150px" filename={drink.image}></Image>
-            </div>
-            <div className={`${style.featureList} ${hidden}`}>
-              <ul id={style.featureStyle}>
-                {drink.ingredients.map(item => {
-                  return <li>{item}</li>
-                })}
-              </ul>
-            </div>
-            <div>
-              <p
+              <div style={{ margin: "10px", color: "#333;" }}>
+                <h3 style={{ fontWeight: "normal", height: "2em" }}>
+                  {drink.name}
+                </h3>
+              </div>
+              <div
                 style={{
-                  textAlign: "right",
-                  position: "absolute",
-                  bottom: "5px",
-                  right: "10px",
-                  margin: "0",
+                  width: "80%",
+                  margin: "10px auto",
+                  marginBottom: "10%",
+                  height: "",
                 }}
               >
-                {drink.price}
-              </p>
+                <Image width="100%" height="" filename={drink.image}></Image>
+              </div>
+              <div className={`${style.featureList}`}>
+                <ul id={style.featureStyle}>
+                  {drink.ingredients.map(item => {
+                    return <li>{item}</li>
+                  })}
+                </ul>
+              </div>
+              <div style={{ margin: "auto 0 0 0" }}>
+                <p
+                  style={{
+                    margin: "10px 10px",
+                  }}
+                >
+                  {drink.price}
+                </p>
+              </div>
             </div>
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   )
 }

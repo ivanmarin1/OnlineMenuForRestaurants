@@ -14,7 +14,7 @@ export default class Navbar extends React.Component {
     super(props)
     this.state = {
       ActiveList: menuSections[0],
-      active: "0",
+      active: 0,
     }
     this._onButtonClick = this._onButtonClick.bind(this)
     this.addActiveClass = this.addActiveClass.bind(this)

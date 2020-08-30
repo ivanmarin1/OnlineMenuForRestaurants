@@ -3,12 +3,14 @@
   max-width: 1000px;
   margin: 30px auto;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .listItem {
   margin: 5px auto;
   display: inline-block;
-  width: 25%;
+  width: 100%;
   background-color: #ffe1d4;
   border: 1px solid rgb(199, 199, 199);
   padding: 10px;

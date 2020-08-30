@@ -4,6 +4,12 @@
   justify-content: space-around;
 }
 
+@media only screen and (max-width: 1026px) {
+  .featureList {
+    display: none;
+  }
+}
+
 #featureStyle {
   list-style: none;
   margin-top: 20px;
