@@ -27,7 +27,12 @@
 }
 
 .listItem.active {
-  transform: scale(1.2);
+  transform: scale(1);
+  z-index: 1;
+}
+
+.listItem.inactive {
+  transform: scale(0.8);
   z-index: 1;
 }
 
@@ -47,6 +52,6 @@
 }
 
 .zoom:hover {
-  transform: scale(1.2);
+  transform: scale(1);
   z-index: 1;
 }

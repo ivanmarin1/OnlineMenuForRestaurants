@@ -52,7 +52,7 @@ const Items = ({ menuItems }) => {
               <div style={{ margin: "auto 0 0 0" }}>
                 <p
                   style={{
-                    margin: "10px 10px",
+                    margin: "0 10px 5px 10px",
                   }}
                 >
                   {drink.price}

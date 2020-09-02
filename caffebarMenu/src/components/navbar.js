@@ -6,6 +6,9 @@ import ShortDrinks from "../menuList/shortDrinks.json"
 import Items from "../components/items"
 import Image from "./image"
 import style from "../styles/navbar.module.css"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const menuSections = [Cocktails, VirginCocktails, Coffee, ShortDrinks]
 
@@ -40,35 +43,48 @@ export default class Navbar extends React.Component {
     return (
       <div>
         <div className={style.list}>
-          {menuSections.map((section, index) => {
-            return (
-              <div
-                role="button"
-                tabIndex={index}
-                className={`${style.listItem} ${style.zoom} ${
-                  this.state.active === index ? style.active : ""
-                }`}
-                id={index}
-                onClick={e => {
-                  this.addActiveClass(index)
-                  this._onButtonClick(index)
-                }}
-                onKeyDown={e => {
-                  this.addActiveClass(index)
-                  this._onButtonClick(index)
-                }}
-              >
-                <h3>{section.sectionName}</h3>
-                <div className={style.imgWrapper}>
-                  <Image
-                    width="100%"
-                    height="150px"
-                    filename={section.sectionImage}
-                  ></Image>
+          <Slider
+            dots={false}
+            infinite={true}
+            slidesToShow={3}
+            slidesToScroll={2}
+            arrows={false}
+            style={{ overflow: "hidden", marginBottom: "20px" }}
+          >
+            {menuSections.map((section, index) => {
+              return (
+                <div>
+                  <div
+                    role="button"
+                    tabIndex={index}
+                    className={`${style.listItem} ${style.zoom} ${
+                      this.state.active === index
+                        ? style.active
+                        : style.inactive
+                    } `}
+                    id={index}
+                    onClick={e => {
+                      this.addActiveClass(index)
+                      this._onButtonClick(index)
+                    }}
+                    onKeyDown={e => {
+                      this.addActiveClass(index)
+                      this._onButtonClick(index)
+                    }}
+                  >
+                    <h3>{section.sectionName}</h3>
+                    <div className={style.imgWrapper}>
+                      <Image
+                        width="100%"
+                        height="150px"
+                        filename={section.sectionImage}
+                      ></Image>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
+          </Slider>
         </div>
         <div>
           <Items menuItems={this.state.ActiveList} />
